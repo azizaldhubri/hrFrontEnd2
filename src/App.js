@@ -26,9 +26,7 @@ import ViewDeduction from './pages/payrolls/ViewDeduction';
 import ViewAllowances from './pages/payrolls/ViewAllowances';
 import Documents from './pages/Documents/Documents';
 import UpdateDocument from './pages/Documents/UpdateDocument';
-import OrderDocument from './pages/Documents/OrderDocuments';
 import DocumentShow from './pages/Documents/DocumentShow';
-import Add_Order_Document from './pages/Documents/Add_Order_Document';
 import Taskes1 from './pages/Taskes/Taskes1';
 import AddTaskes from './pages/Taskes/AddTask'; 
 import Register from './pages/Auth/Register';
@@ -116,9 +114,8 @@ function App() {
                 <Route path='documents' element={<Documents/>}  ></Route> 
                  <Route path='AddDocument' element={<AddDocument/>} ></Route> 
                 <Route path='UpdateDocument/:id' element={<UpdateDocument/>} ></Route>            
-                <Route path='DocumentShow/:id' element={<DocumentShow/>}  ></Route>            
-                <Route path='OrderDocument' element={<OrderDocument/>}  ></Route>            
-                <Route path='AddOrderDocument' element={<Add_Order_Document/>}  ></Route>            
+                <Route path='DocumentShow/:id' element={<DocumentShow/>}  ></Route>       
+                          
                  
                  </Route> 
            
