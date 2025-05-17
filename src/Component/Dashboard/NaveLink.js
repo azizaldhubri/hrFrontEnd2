@@ -1,4 +1,5 @@
-import { faPlus, faUsers,  } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding, faCalendarAlt,
+     faClipboardCheck, faCog, faFileAlt,  faFileInvoiceDollar,  faPlus, faUsers,  } from '@fortawesome/free-solid-svg-icons'
  
 
 export const Links=[
@@ -44,11 +45,11 @@ export const Links=[
 export const taplink=[
    {maintitle:'إدارة الموارد البشرية',link:'#',
     permission:'موارد بشرية',
-     img:'Mask Group 75.png',   
+     img:'Mask Group 75.png', 
+     icon:faUsers,  
     subtitle:[
-        {link:'users',title:'الموظفين'}
-                , {link:'EmployeeChart',title:'البيانات'},               
-                , {link:'adduser',title:'اضافة موظف'},               
+        {link:'users',title:'الموظفين'}                          
+        , {link:'adduser',title:'اضافة موظف'},               
                 // {link:'Salaries',title:'المرتبات'},
         //   {link:'#',title:'نقل الموظفين'}
         ]         
@@ -56,13 +57,17 @@ export const taplink=[
    },
 
 //    
-   {maintitle:'إدارة الإجازات',link:'#', permission:'مهام الإدارات',img:'Mask Group 78.png' ,   
+   {maintitle:'إدارة الإجازات',link:'#', permission:'مهام الإدارات',img:'Mask Group 78.png' , 
+    //  icon:faPlane,   
+     icon:faCalendarAlt,   
     subtitle:[  {link:'LeavesType',title:'انواع الإجازة' },  {link:'AddLeavesRequst',title:'طلب إجازة جديد' },  
         {link:'Leaves',title:'الإجازات'},{link:'LeavesRequestsManegment',title:'إدارة طلبات الاجازة'},        
         {link:'LeaveBalancesTable',title:'عرض أرصدة الاجازات'},              
    ]},
 
-   {maintitle:'إدارة المرتبات',permission:'إدارة المرتبات', img:'Mask Group 73.png',   
+   {maintitle:'إدارة المرتبات',permission:'إدارة المرتبات', img:'Mask Group 73.png',  
+     icon:faFileInvoiceDollar ,  
+    //  icon:faMoneyBill ,  
     subtitle:[      
         {link:'payrolls',title:"المرتبات"},          
         {link:'AddAllowances',title:"إضافة حافز"},
@@ -77,20 +82,23 @@ export const taplink=[
         
              
    ]},
-   {maintitle:'إدارة المهام',link:'#', permission:'مهام الإدارات',img:'Mask Group 78.png' ,   
+   {maintitle:'إدارة المهام',link:'#', permission:'مهام الإدارات',img:'Mask Group 78.png' ,
+     icon:faClipboardCheck ,  
     subtitle:[{link:'addtask',title:'جديد'}, {link:'Taskes1',title:'الوارد'},
        
                
    ]},
 
-   {maintitle:'المستندات',permission:'المستندات',img:'Mask Group 73.png',    
+   {maintitle:'المستندات',permission:'المستندات',img:'Mask Group 73.png',  
+     icon:faFileAlt,   
     subtitle:[      
        {link:'AddDocument',title:"اضافة مستند"
         ,role:['1995','2001']},{link:'documents',title:"استعراض"},{link:'OrderDocument',title:"سندات الأمر" }      
    ]},
 
 
-   {maintitle:'إدارة الاقسام',permission:'إدارةالاقسام', img:'Mask Group 73.png',   
+   {maintitle:'إدارة الاقسام',permission:'إدارةالاقسام', img:'Mask Group 73.png', 
+     icon:faBuilding,   
     subtitle:[      
         {link:'Departments',title:"الاقسام"},
         {link:'AddDepartment',title:"إضافة قسم"},
@@ -99,7 +107,8 @@ export const taplink=[
    ]},
 
   
-   {maintitle:'الإعدادات',permission:'الصلاحيات',  img:'Mask Group 83.png',   
+   {maintitle:'الإعدادات',permission:'الصلاحيات',  img:'Mask Group 83.png', 
+     icon:faCog ,
     subtitle:[  
         {title: "الصلاحيات",link:'Role' },
         {title: "نموذج جديد",link:'#', },{title: "ادارة النماذج",link:'#' },
