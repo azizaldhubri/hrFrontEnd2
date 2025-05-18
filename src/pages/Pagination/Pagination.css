@@ -2,6 +2,7 @@
 .custom-pagination{
    list-style: none;
 }
+.ul{  list-style: none;}
 
 .pagination-tag-anchor{
     width: 30px;
