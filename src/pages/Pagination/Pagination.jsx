@@ -1,5 +1,5 @@
-import './Pagination.css'
 import ReactPaginate from 'react-paginate';
+import './Pagination.css'
 
 export default function PaginatedItems({ itemsPerPage ,setPage,total}) {
 
