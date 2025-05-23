@@ -11,7 +11,7 @@ import { baseUrl, REGISTER } from "../../Api/Api";
  import LoadingSubmit from "../../Component/Loading/Loading";
     
    
-   export default function Register2(){  
+   export default function Register(props){  
 
         const cookie=Cookie();     
          const[loading,setLoading]=useState(false);   
