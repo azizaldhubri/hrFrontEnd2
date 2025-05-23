@@ -413,8 +413,8 @@ import { baseUrl, REGISTER } from "../../Api/Api";
    
                  <div className="w-100 border text-center gap-4">
                    <button className="btn btn-primary m-3" onClick={handleSubmit}>حفظ</button>
-                   
-                   {/* <button className="btn btn-primary">إلغاء</button> */}
+                    <button className=" btn btn-primary m-3  "onClick={props.login}> رجوع</button>  
+                  
                  </div>
                     
               
