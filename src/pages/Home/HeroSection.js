@@ -10,6 +10,7 @@ const HeroSection = () => {
                 المتصفح لا يدعم الفيديو.
                 </video>
                 <div className="overlay-content w-100">
+  <h1 className=' text-danger border border-3 bg-black'  > تم ايقاف الإستضافة الخاصة بقواعد البيانات  </h1>
               <h1>مرحبًا بك في نظام الموارد البشرية</h1>
               <p>إدارة احترافية للموظفين والمهام</p>
             </div>
