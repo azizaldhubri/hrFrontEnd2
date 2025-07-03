@@ -1,13 +1,12 @@
 import { Form , Col } from "react-bootstrap";
 import './Auth.css' 
 import axios from "axios";
-import {  useEffect, useRef, useState } from "react" 
+import {   useEffect, useRef, useState } from "react" 
 import Cookie from 'cookie-universal' ; 
-import { baseUrl, LOGIN } from "../../Api/Api"; 
+import { baseUrl, LOGIN } from "../../Api/Api";   
 import LoadingSubmit from "../../Component/Loading/Loading";
  
-export default function Login(props){
-
+export default function Login(props){ 
         const [form,setForm]=useState({       
         email:'',
         password: ''
@@ -15,8 +14,7 @@ export default function Login(props){
      const [rememberMe, setRememberMe] = useState(false);    
 
     const[loading,setLoading]=useState(false);
-    const[err,setErr]=useState('');
-  
+    const[err,setErr]=useState('');  
     const cookie=Cookie();   
 
      // ref
@@ -70,58 +68,53 @@ export default function Login(props){
         }
 
     }
-    return(
-    <div className=" bg-dark w-100">
-
-    {loading && <LoadingSubmit/>} 
-        <div className="  w-100  d-flex align-items-center justify-content-center  h-100  "
-         style={{height:'90vh',zIndex:22, position:'relative'}}>           
-              
-            <div className="p-2   text-white col-12 col-lg-6 col-md-6 flex-wrap col-sm-6 rounded 
-                fs-5   " style={{position:'absolute' ,zIndex:292,
+    return( 
+        <>
+        {loading && <LoadingSubmit/> }
+            <div className="p-2    text-white col-12 col-lg-6 col-md-6 flex-wrap col-sm-6 rounded border  
+                fs-5   " style={{
+                        boxShadow: '2px 3px 6px #848c8d',
                 background:'rgb(9, 126, 141)' 
-                }}> 
-                {/* <Col className=" " > */}
+                }}>                 
 
-                    <div className=" w-100 mt-3  fs-5 d-flex    align-items-center justify-content-center  flex-wrap">                                     
-                    <Form.Group   className="d-flex  col-lg-12 col-md-12 col-sm-12  col-12   p-2 flex-wrap align-items-center justify-content-center" >
-                            <Form.Label  className="  col-6 col-lg-3 col-md-4 col-sm-4 m-0 col-md-3"   >الايميل:</Form.Label>
-                            <Col lg={12} sm={12} xs={12} md={12} >
-                            <Form.Control  className="w-100 p-2"                                         
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                required
-                                type="email" placeholder="Enter Your Email.." 
-                                ref={focus}
-                                >                        
-                            </Form.Control>
-                            </Col>
-                    </Form.Group> 
-                    <Form.Group   className="d-flex  col-lg-12 col-md-12 col-sm-12  col-12   p-2 flex-wrap align-items-center
-                        justify-content-center " >
-                    
-                        <Form.Label  className="  col-6 col-lg-3 col-md-4 col-sm-4 m-0 col-md-3"   > كلمة المرور: </Form.Label>
-                    <Col lg={12} sm={12} xs={12} md={12} >
-                    <Form.Control
-                            name="password"
-                            value={form.password}
+                <div className=" w-100 mt-3  fs-5 d-flex    align-items-center justify-content-center  flex-wrap">                                     
+                <Form.Group   className="d-flex  col-lg-12 col-md-12 col-sm-12  col-12   p-2 flex-wrap align-items-center justify-content-center" >
+                        <Form.Label  className="  col-6 col-lg-3 col-md-4 col-sm-4 m-0 col-md-3"   >الايميل:</Form.Label>
+                        <Col lg={12} sm={12} xs={12} md={12} >
+                        <Form.Control  className="w-100 p-2"                                         
+                            name="email"
+                            value={form.email}
                             onChange={handleChange}
-                            minLength={6}
                             required
-                            type="password" placeholder="Enter Your Password.."
-                        ></Form.Control>
-                    </Col>
-
-                    </Form.Group>  
-                    {err && <p className="m-0 text-danger">{err}</p> }                  
-                                                        
-                            
-                    
-                    </div>
+                            type="email" placeholder="Enter Your Email.." 
+                            ref={focus}
+                            >                        
+                        </Form.Control>
+                        </Col>
+                </Form.Group> 
+                <Form.Group   className="d-flex  col-lg-12 col-md-12 col-sm-12  col-12   p-2 flex-wrap align-items-center
+                    justify-content-center " >
                 
+                    <Form.Label  className="  col-6 col-lg-3 col-md-4 col-sm-4 m-0 col-md-3"   > كلمة المرور: </Form.Label>
+                <Col lg={12} sm={12} xs={12} md={12} >
+                <Form.Control
+                        name="password"
+                        value={form.password}
+                        onChange={handleChange}
+                        minLength={6}
+                        required
+                        type="password" placeholder="Enter Your Password.."
+                    ></Form.Control>
+                </Col>
+
+                </Form.Group>  
+                {err && <p className="m-0 text-danger">{err}</p> }                  
+                                                    
+                        
+                
+                </div>               
             
-                <div className="d-flex gap-3 align-itmes-center justify-content-center mb-2  ">
+                <div className="d-flex gap-3 align-itmes-center justify-content-center flex-wrap  mb-2  ">
                         <button className="text-center rounded btn btn-primary mt-3 " onClick={handleSubmit}
                         style={{background:'rgb(3, 35, 77)' }}>login</button>
                         <button className="text-center rounded btn btn-primary mt-3  "
@@ -141,10 +134,8 @@ export default function Login(props){
                    <br/>
 
                 </div>
-            </div>
-
-            
-        </div>
-    </div> 
+            </div>          
+        </>             
+    
     )
 }
