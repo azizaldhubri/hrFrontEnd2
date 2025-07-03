@@ -1,8 +1,7 @@
-.modal_homepage { 
+.modal_homepage1 { 
   position: absolute;
   width: 100%;
-  top:90px;
-  /* height: 85vh;        */
+  top:90px;  
   height: 85vh;       
    background-color: rgba(189, 176, 176, 0.5);  
   display: flex;   
@@ -12,36 +11,10 @@
    justify-content: center;
 
 }
-.modal_content  {
-  /*  
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 100px;
-  /* width: 200px; */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-   /* width: 80%;  */
-  /* background-color: rgb(14, 28, 219); */
-  /* background: #c9d614; */
-  /* margin-top: 10px; */
-  padding: 0px;
-  border-radius: 8px;
-  /* border: 3px solid red; */
-  max-width: 800px;
-  width: 700px;
-  min-width: 200px;
-  /* max-height: 600; */
-  width: 100%;
-  text-align: center;
-  /* flex-basis: 50vh; */
-  /* height: inherit; */
-  /* min-height: 50vh; 
-  overflow: auto;  */
-
-  /* height: 50vh; */
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-
+.modal_content_home  { 
+  max-width: 900px;
+  display: contents;  
+  text-align: center; 
 }
 
 .card{
