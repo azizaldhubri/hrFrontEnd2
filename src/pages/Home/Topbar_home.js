@@ -78,7 +78,9 @@ export default function Topbar_home(props){
          
           
         <div    ref={topbarRef} className="w-100     d-flex align-items-center justify-content-center rounded    "
-           style={{height:'90px' , position:'fixed',opacity:'1',
+           style={{height:'90px' , 
+            position:'fixed',
+            opacity:'1',
             zIndex:'4'  ,
               transition: 'background 0.5s ease, color 1.9s ease',         
            }}> 
@@ -86,28 +88,8 @@ export default function Topbar_home(props){
                d-flex align-items-center justify-content-between ps-4 pe-4 mb-1" 
                  style={{height:'100%',border:'4px solid rgb(13, 44, 85)' }}>
              
-            <div className=" col-lg-3 col-md-3 col-sm-2 col-3  text-center order-lg-3  fs-5  ">
-              {/* <p>yyyyyyyyyyy</p> */}
-                
-                <p   className="m-0 cursor"
-                 style={{background:'none',cursor:'pointer'}}
-                 onClick={()=>{ 
-                              
-                  props.setIsModalOpen(perv=>!perv)  
-                   }} >تسجيل الدخول</p>
-              
-            
-           </div> 
-           <div className="  d-flex align-items-center gap-2 justify-content-center  col-lg-3 col-md-3 col-sm-2   order-lg-1  "
-          //  style={{zIndex:'2'} } 
-               >
-             {windowSize >950 && 
-               <p className="m-0 fs-3 ">مرحبا في انظمة</p> }
-                {windowSize > 230 && 
-                <img src={require('../../img/المس.png')} style={{width:'75px',borderRadius:'100%'}}></img>
-                   }
-                   
-             </div> 
+         
+           
 
             <div className="order-lg-2    col-lg-6 col-md-4 col-sm-2 col-3     h-100  fs-5 ">
                     {windowSize >1000 && 
@@ -166,7 +148,29 @@ export default function Topbar_home(props){
                     </div> 
                    
                        }
-            </div>  
+            </div>
+            <div className="  d-flex align-items-center gap-2 justify-content-center  col-lg-3 col-md-3 col-sm-2   order-lg-1  "
+          //  style={{zIndex:'2'} } 
+               >
+             {windowSize >950 && 
+               <p className="m-0 fs-3 ">مرحبا في انظمة</p> }
+                {windowSize > 230 && 
+                <img src={require('../../img/المس.png')} style={{width:'75px',borderRadius:'100%'}}></img>
+                   }
+                   
+             </div>   
+               <div className=" col-lg-3 col-md-3 col-sm-2 col-3  text-center order-lg-3  fs-5  ">
+              {/* <p>yyyyyyyyyyy</p> */}
+                
+                <p   className="m-0 cursor"
+                 style={{background:'none',cursor:'pointer'}}
+                 onClick={()=>{ 
+                              
+                  props.setIsModalOpen(perv=>!perv)  
+                   }} >تسجيل الدخول</p>
+              
+            
+           </div> 
 
             </div>
 
