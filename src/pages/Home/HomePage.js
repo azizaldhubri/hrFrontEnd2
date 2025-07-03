@@ -17,7 +17,7 @@ import CallToActionSection from "./CallToActionSection";
 import ScreenshotsSection from "./ScreenshotsSection";
 import Topbar_home from "./Topbar_home";
 import { WindowSize } from "../../Component/Context/WindowContext";
-import Register2 from "../Auth/Register2";
+ 
 // import ScreenshotCarousel from "./ScreenshotCarousel";
  
 
