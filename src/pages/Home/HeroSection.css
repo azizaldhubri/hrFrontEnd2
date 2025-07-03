@@ -18,6 +18,7 @@
     object-fit: cover;
     z-index: -1;
     padding: 0px 3px;
+       top: 90px;
   }
   
   /* المحتوى فوق الفيديو */
