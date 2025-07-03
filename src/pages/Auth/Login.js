@@ -11,27 +11,44 @@ export default function Login(props){
         const [form,setForm]=useState({       
         email:'',
         password: ''
-    })     
+    }) 
+     const [rememberMe, setRememberMe] = useState(false);    
 
     const[loading,setLoading]=useState(false);
     const[err,setErr]=useState('');
-    //cookies
+  
     const cookie=Cookie();   
 
      // ref
-     const focus=useRef('');    
-     // handle focus
+     const focus=useRef('');      
      useEffect(()=>{     
       focus.current.focus();
+        const savedEmail = localStorage.getItem('email');
+        const savedPassword = localStorage.getItem('password');
+        if (savedEmail && savedPassword) {
+        setForm({email:savedEmail,
+            password:savedPassword
+        });
+        
+        setRememberMe(true);}
      },[]);
     
-    function handleChange (e){
-        
+    function handleChange (e){        
         setForm({...form,[e.target.name]: e.target.value})
         } 
+
+ 
     async function handleSubmit(e){
         e.preventDefault();
-        setLoading(true)
+        setLoading(true);
+          if (rememberMe) {
+      localStorage.setItem('email', form.email);
+      localStorage.setItem('password', form.password);
+    } else {
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
+    }
+        
         try{
        const res= await axios.post(`${baseUrl}/${LOGIN}`,form);  
       
@@ -54,8 +71,9 @@ export default function Login(props){
 
     }
     return(
-    <>
-       {loading && <LoadingSubmit/>} 
+    <div className=" bg-dark w-100">
+
+    {loading && <LoadingSubmit/>} 
         <div className="  w-100  d-flex align-items-center justify-content-center  h-100  "
          style={{height:'90vh',zIndex:22, position:'relative'}}>           
               
@@ -110,13 +128,23 @@ export default function Login(props){
                         style={{background:'rgb(3, 35, 77)' }} onClick={props.register}>Register
                             {/* <Link to='/Register'style={{color:'white'}} >Register</Link> */}
                                 
-                            </button>
+                    </button>
+
+                    <label  className=" text-white mt-3 ">
+                    <input className="   ms-3 "
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                    />
+                        تذكرني
+                   </label>
+                   <br/>
 
                 </div>
             </div>
 
             
         </div>
-    </> 
+    </div> 
     )
 }
