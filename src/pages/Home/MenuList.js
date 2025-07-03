@@ -10,18 +10,15 @@ export default function MenuList(props){
      const message = 'مرحباً! كيف يمكنني مساعدتك؟';  
      const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    return(
-        <div className='w-100  d-flex    justify-content-center' style={{
-            position:'relative'
-        }} >
-         <div className=" w-100 d-flex  align-items-start    flex-column" style={{height:'80vh', }}>
+    return(       
+         <div className="  d-flex  align-items-start  menulist  flex-column" style={{height:'60vh', }}>
 
-            <div className='w-100 d-flex  align-items-center justify-content-between   p-2 '
+            <div className='  d-flex  align-items-center justify-content-between   p-2  parent'
             style={{borderBottom:'2px solid black'}}>
              <button onClick={props.openMenue}>X</button>
             <img src={require('../../img/المس.png')} style={{width:'60px',height:'60px',borderRadius:'100%'}}></img>
             </div>
-            <div className='w-100 p-2 pe-3 fs-4 text-end mb-3'style={{borderBottom:'2px solid black'  }}>
+            <div className='w-100 p-2   fs-4 text-end mb-3'style={{borderBottom:'2px solid black'  }}>
                   {/* <Link to='#' className=' '>الصفحة الرئيسية</Link> */}
                     <button   onClick={props.onHeroSectionClick}>الصفحة الرئيسية </button>
 
@@ -36,9 +33,9 @@ export default function MenuList(props){
                              onMouseLeave={()=>setOpen2(false)}>
                         <Link   to='#'  >معلومات عنا </Link> 
                         { open2===true &&                                     
-                            <div style={{ position:'absolute' ,left:'1',right:'0' }}>
+                            <div style={{ position:'absolute' ,left:'1',right:'0',background:'rgb(200 221 212)' }}>
                                 <ul className="ps-1 pt-2 pb-2  m-0 rounded d-flex align-items-start justify-content-between 
-                                 flex-column  gap-3   bg-success  " >
+                                 flex-column  gap-3  " >
                                     <li  className=""
                                     
                                     ><Link  className=" link"  to='#'> معلومات عنا</Link> </li>
@@ -61,9 +58,9 @@ export default function MenuList(props){
                             <Link   to='#' className="    ">المزايا</Link> 
                             { open===true &&                                     
                                 <div 
-                                        style={{ position:'absolute' ,left:'1',right:'0',height:'fitcontent' }}>
+                                        style={{ position:'absolute' ,left:'1',right:'0',height:'fitcontent',background:'rgb(200 221 212)' }}>
                                                <ul className="ps-1 pt-2 pb-2  m-0 rounded d-flex align-items-start justify-content-between 
-                                                flex-column  gap-3  bg-success" 
+                                                flex-column  gap-3 " 
                                       style={{    whiteSpace: 'normal',
                                         
                                         // overflow:'auto'
@@ -92,6 +89,6 @@ export default function MenuList(props){
             <div></div> 
         </div>
 
-        </div>  
+        
     )
 }
