@@ -1,9 +1,13 @@
- import { useContext, useRef, useState } from "react"; 
+ import { useContext, useRef, useState } from "react";
+ 
 import MenuList from "./MenuList";
 import './menulist.css';
 import './home.css' ; 
-import Login from "../Auth/Login";  
-// import Register from "../Auth/Register"; 
+import Login from "../Auth/Login"; 
+// import ScrollingBar from "./ScrollingBar";
+// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Register from "../Auth/Register";
+// import LoadingSubmit from "../../Component/Loading/Loading";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import FeaturesSection from "./FeaturesSection";
@@ -13,12 +17,19 @@ import CallToActionSection from "./CallToActionSection";
 import ScreenshotsSection from "./ScreenshotsSection";
 import Topbar_home from "./Topbar_home";
 import { WindowSize } from "../../Component/Context/WindowContext";
-import Register2 from "../Auth/Register2"; 
+import Register2 from "../Auth/Register2";
+// import ScreenshotCarousel from "./ScreenshotCarousel";
+ 
 
 export default function Homepage(){ 
     const size=useContext(WindowSize) ;
     const windowSize=size.windowSize ; 
      const[openMenue,setOpenMenu]=useState(false) ;
+     
+     const phoneNumber = '967770515088';  
+     const message = 'مرحباً! كيف يمكنني مساعدتك؟';  
+     const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
    const aboutRef = useRef(null);
    const heroSectionRef = useRef(null);
   const featuresRef = useRef(null);
@@ -37,7 +48,8 @@ export default function Homepage(){
 
 
       const[openFormRegister,setOpenFormRegister]=useState(false) ;
-      function handeleOpenFormRegister(){              
+      function handeleOpenFormRegister(e){ 
+        console.log(e)        
          setOpenFormRegister(perv=>!perv)
         }
         
@@ -47,21 +59,30 @@ export default function Homepage(){
 const [isModalOpen, setIsModalOpen] = useState(false);        
 
   function handle_openModel(e){    
-    setIsModalOpen(e)}    
+    setIsModalOpen(e)
+}
+
+      // دالة لفتح المودال
+      // const openModal = () => setIsModalOpen(true);
     
       // دالة لإغلاق المودال
-      const closeModal = () => setIsModalOpen(false);    
-      function Modal({ onclose }) {
+      const closeModal = () => setIsModalOpen(false);
+    
+      function Modal({ onClose }) {
         return (
-            <div className="modal_homepage1  "
+            <div className="modal_homepage1   "
               onClick={(e)=>{
               setIsModalOpen(false) ;
                 }}  >                    
-                    <div  className='modal_content_home' 
+                    <div  className='modal_content_home  bg-danger1 
+                      ' 
                        onClick={(e)=>{                              
-                        e.stopPropagation(); }}  >                          
+                        e.stopPropagation(); }}  >                         
+                        {/* {openFormRegister === false ?  <Login register={handeleOpenFormRegister}/>
+                        : <Register login={handeleOpenFormRegister}/> }   */}
                         {openFormRegister === false ?  <Login register={handeleOpenFormRegister}/>
-                        : <Register2 login={handeleOpenFormRegister}/> }                        
+                        : <Register2 login={handeleOpenFormRegister}/> }  
+                      
                     </div>                    
             </div>
         );
@@ -78,17 +99,27 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               />
 
           </div>
-          
+          {/* <ScrollingBar />  */}
 
-      <div >      
-        <div ref={heroSectionRef}><HeroSection /></div>
-        <div ref={aboutRef}><AboutSection /></div>
-        <div ref={featuresRef}><FeaturesSection /></div>
-        <div ref={screenshotsRef}><ScreenshotsSection /></div>
-        <div ref={testimonialsRef}><TestimonialsSection /></div>
-        <div ref={callToActionRef}><CallToActionSection /></div>
-        <Footer />
-     </div> 
+               <div>
+      {/* القائمة أو الأزرار */}
+      {/* <nav style={{ position: 'fixed', top: 0, background: '#fff', width: '100%', padding: '10px' }}>
+        <button onClick={() => scrollTo(aboutRef)}>عنّا</button>
+        <button onClick={() => scrollTo(featuresRef)}>المميزات</button>
+        <button onClick={() => scrollTo(screenshotsRef)}>الصور</button>
+        <button onClick={() => scrollTo(testimonialsRef)}>آراء العملاء</button>
+        <button onClick={() => scrollTo(callToActionRef)}>اتصل بنا</button>
+      </nav> */}
+
+      
+      <div ref={heroSectionRef}><HeroSection /></div>
+      <div ref={aboutRef}><AboutSection /></div>
+      <div ref={featuresRef}><FeaturesSection /></div>
+      <div ref={screenshotsRef}><ScreenshotsSection /></div>
+      <div ref={testimonialsRef}><TestimonialsSection /></div>
+      <div ref={callToActionRef}><CallToActionSection /></div>
+      <Footer />
+    </div> 
 
       
            {openMenue && windowSize<1000 &&           
@@ -103,8 +134,23 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                 setIsModalOpen={handle_openModel}
                 />
             
-           </div>}                 
-           
+           </div>}
+
+          {/* <HeroSection/>  
+          <AboutSection/> 
+          <FeaturesSection/>  
+          <ScreenshotsSection  /> */}
+          {/* <TestimonialsSection /> */}
+          {/* <ScreenshotCarousel/> */}
+          {/* <CallToActionSection /> */}
+          {/* <Footer/>   */}
+
+{/* 
+            {openMenue &&
+              <div className="menulist border d-flex align-items-center  ">
+              <MenuList  openMenue={handleOpen} />
+            </div>           
+            }  */}
           <div className=" w-100    " style={{zIndex:'2'}}>     
             {isModalOpen && <Modal onClose={closeModal} />}
           </div>
