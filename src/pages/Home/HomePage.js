@@ -51,7 +51,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
     
       // دالة لإغلاق المودال
       const closeModal = () => setIsModalOpen(false);    
-      function Modal({  }) {
+      function Modal({ onclose }) {
         return (
             <div className="modal_homepage1  "
               onClick={(e)=>{
