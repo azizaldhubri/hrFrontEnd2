@@ -80,7 +80,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                         {/* {openFormRegister === false ?  <Login register={handeleOpenFormRegister}/>
                         : <Register login={handeleOpenFormRegister}/> }   */}
                         {openFormRegister === false ?  <Login register={handeleOpenFormRegister}/>
-                        : <Register2 login={handeleOpenFormRegister}/> }  
+                        : <Register login={handeleOpenFormRegister}/> }  
                       
                     </div>                    
             </div>
