@@ -29,7 +29,7 @@
 
 ### نماذج من الواجهه الامامية للمشروع (Screenshots) 
 - - -
-![واجهة التطبيق](./screenshots/home1.PNG)
+![واجهة التطبيق](screenshots/home1.PNG/.)
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
