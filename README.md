@@ -28,7 +28,7 @@
  
  
 
-### نماذج من الواجهه الامامية للمشروع
+### نماذج من الواجهه الامامية للمشروع (Screenshots).
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
