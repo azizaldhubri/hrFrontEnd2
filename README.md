@@ -29,7 +29,7 @@
 
 ### نماذج من الواجهه الامامية للمشروع (Screenshots) 
 - - -
-![واجهة التطبيق](screenshots/home1.PNG)
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/home1.PNG)
  
 
 
