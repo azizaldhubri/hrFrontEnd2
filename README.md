@@ -48,7 +48,7 @@
 واجهة عرض ارصدة الاجازات للموظفين </br><br/>
 ![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/leave_balances.PNG)  </br>
 واجهة عرض المهام المرسله والواردة </br><br/>
-![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/tasks.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/task.PNG)  </br>
 
  - - -
 الخطة القادمة من المشروع 
