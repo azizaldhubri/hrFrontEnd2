@@ -49,17 +49,11 @@
 ![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/leave_balances.PNG)  </br>
 واجهة عرض المهام المرسله والواردة </br><br/>
 ![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/tasks.PNG)  </br>
- 
 
+ - - -
+الخطة القادمة من المشروع 
+ترجمة المشروع الى اللغة الانجليزية واضافة button تبديل اللغة 
+إضافة اللمسات الاخيرة للمشروع مثل تمكين المستخدم لتغيير لون واجهة العرض 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
- 
-
-## Learn More
 
  
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
