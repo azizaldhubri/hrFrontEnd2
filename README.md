@@ -1,14 +1,21 @@
 # مشروع إدارة الموارد البشرية 
+ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## التقنيات المستخدمه في المشروع
 
-## Available Scripts
+استخدمت لبناء المشروع في الواجهه الامامية React.js , Material_-Ui , BooTstrap , Context,React Hooks
+أيضا مكتبات اخرى لأستخراج تقارير Pdf ,Excel ,
 
-In the project directory, you can run:
+###  وصف المشروع
 
-### `npm start`
+يتميز المشروع بالتالي :
+أضافة موظفين جدد وتحديد الصلاحية المناسبه لهم
+ادارة المرتبات والخصم التلقائي عند إضافة غياب أو زيادة المرتب عند وجود بدلات للموظف
+إدارة المهمام حيث يتمكن الموظفين من رفع الملفات ومراقبة تقدم المهمه
+إدارة الإجازات - يتقدم الموظف بطلب إجازه ويصل للمدير إشعار بوجود طلب إجازة من احد الموظفين ويتم قبولها او الرفض 
+سهولة المراقبة حيث يصل لمدير النظام إشعار عند إضافة موظف جديد وسهولة البحث 
+سرعة استرجاع البيانات -لان البيانات المرجوعه حسب paginatetion ولس كل البينات  
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
