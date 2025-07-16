@@ -9,34 +9,26 @@
 ###  وصف المشروع
 
 يتميز المشروع بالتالي :<br/>
-أضافة موظفين جدد وتحديد الصلاحية المناسبه لهم * </br>
-ادارة المرتبات والخصم التلقائي عند إضافة غياب أو زيادة المرتب عند وجود بدلات للموظف </br>
-إدارة المهمام حيث يتمكن الموظفين من رفع الملفات ومراقبة تقدم المهمه </br>
+ * أضافة موظفين جدد وتحديد الصلاحية المناسبه لهم   </br>
+ * إادارة المرتبات والخصم التلقائي عند إضافة غياب أو زيادة المرتب عند وجود بدلات للموظف </br>
+ * إدارة المهمام حيث يتمكن الموظفين من رفع الملفات ومراقبة تقدم المهمه </br>
  * إدارة الإجازات - يتقدم الموظف بطلب إجازه ويصل للمدير إشعار بوجود طلب إجازة من احد الموظفين ويتم قبولها او الرفض </br>
  * سهولة المراقبة حيث يصل لمدير النظام إشعار عند إضافة موظف جديد وسهولة البحث </br>
  * سرعة استرجاع البيانات -لان البيانات المرجوعه حسب paginatetion ولس كل البينات  </br> 
+ * عرض التمثيل البياني للبيانات </br>
+ * استجابة لجميع احجام الشاشات </br>
+ * سهولة التنقل بين الصفحات </br>
+ * بناء مكونات قابله للأستخدام في مشاريع اخرى </br>
+   
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 
+ ### الواجهة الخلفيه للمشروع 
+استخدمت Laravel لبناء backend  ولكن تعذر رفعها للأستضافه نظرا لعدم تجديد رسوم الأستضافة 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ 
+ 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+### نماذج من الواجهه الامامية للمشروع
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
