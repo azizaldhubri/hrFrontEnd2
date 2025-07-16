@@ -29,7 +29,16 @@
 
 ### نماذج من الواجهه الامامية للمشروع (Screenshots) 
 - - -
-![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/home1.PNG)
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/home1.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/home1.1.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/permissions.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/uses1.1.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/uses1.2.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/department.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/Salaries.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/Leave_requests.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/leave_balances.PNG)  </br>
+![واجهة التطبيق](https://github.com/azizaldhubri/hrFrontEnd2/blob/main/public/screenshots/tasks.PNG)  </br>
  
 
 
